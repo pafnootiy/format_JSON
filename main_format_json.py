@@ -8,6 +8,7 @@ def load_flats(file_path=r"C:\Users\Alex K\p_p\format_JSON\flats.json"):
     flats = json.loads(text)
     return flats
 
+
 if __name__ == '__main__':
 
     flats = load_flats()
