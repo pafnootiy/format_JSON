@@ -1,20 +1,17 @@
 import json
-import copy
 
 
-def load_flats(file_path=r"C:\Users\Alex K\p_p\format_JSON\flats.json"):
+def load_data(file_path=r"data.json"):
     with open(file_path, "r", encoding='utf-8', newline='') as file_obj:
         text = file_obj.read()
-    flats = json.loads(text)
-    return flats
+    data = json.loads(text)
+    return data
 
 
 if __name__ == '__main__':
 
-    flats = load_flats()
-
-    new_flat = copy.deepcopy(flats)
-    edit_flat = json.dumps(new_flat, sort_keys=True,
+    data = load_data()
+    edit_data = json.dumps(data, sort_keys=True,
                            indent=4, ensure_ascii=False)
 
-    print(edit_flat)
+    print(edit_data)
