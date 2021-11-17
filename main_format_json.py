@@ -4,7 +4,6 @@ import os
 
 
 def load_data(file_path="data.json"):
-    print(file_path)
     with open(file_path, "r", encoding='utf-8', newline='') as file_obj:
         text = file_obj.read()
     data = json.loads(text)
